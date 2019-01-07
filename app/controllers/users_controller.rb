@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       flash[:name] = invalid
       flash[:password] = invalid
       flash[:password_confirmation] = invalid
-      redirect_to '/signup'
+      redirect_to signup_path
     end
   end
 
