@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to welcome_path
+      redirect_to users_welcome_path
     else
       flash[:name] = invalid
       flash[:password] = invalid
