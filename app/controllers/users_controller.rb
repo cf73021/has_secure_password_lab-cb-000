@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    @user = user.find_by(user_params)
+    @user = user.find_by(id: session[:user_id])
   end
 
   private
